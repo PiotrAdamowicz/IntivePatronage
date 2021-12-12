@@ -1,14 +1,14 @@
 export const searchHistory = (searchString) => {
-  let id = new Date() + Math.random() * 100;
   let history = localStorage.getItem("history")
     ? localStorage.getItem("history").split(",")
     : [];
+  //SET MAX HISTORY to 20 elements
   if (history.length >= 20) {
     history.shift();
   }
 
   if (!history.includes(searchString)) {
-    history.push({ id, name: searchString });
+    history.push(searchString);
     localStorage.removeItem("history");
     localStorage.setItem("history", history.toString());
   }
