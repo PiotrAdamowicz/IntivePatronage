@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import { fetchQuery } from "../../utils/fetchQuery";
+import { getArticlesData } from "../../utils/requests";
+import { searchHistory } from "../../utils/searchHistory";
 
 import styles from "./searchForm.module.css";
 
@@ -29,7 +31,8 @@ const SearchForm = ({ querySetter }) => {
         className={styles.searchButton}
         onClick={(e) => {
           e.preventDefault();
-          fetchQuery(searchInput, querySetter, setHistory);
+          fetchQuery(searchInput, getArticlesData, querySetter, setHistory);
+          searchHistory(searchInput);
           setSearchInput("");
           setPlaceholder("What are you looking for...");
         }}

@@ -1,4 +1,4 @@
-export const searchArticlesData = async (searchString, amount = 10) => {
+export const getArticlesData = async (searchString, amount = 10) => {
   const searchArray = searchString.split(" ");
   let search = "";
   if (searchArray.length > 1) {

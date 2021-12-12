@@ -1,10 +1,6 @@
-import { searchHistory } from "./searchHistory";
-import { searchArticlesData } from "./requests";
-
-export const fetchQuery = async (title, querySetter, historySetter) => {
-  historySetter(searchHistory(title));
+export const fetchQuery = async (title, fetchData, querySetter) => {
   try {
-    const res = await searchArticlesData(title);
+    const res = await fetchData(title);
 
     querySetter(res);
   } catch (err) {
