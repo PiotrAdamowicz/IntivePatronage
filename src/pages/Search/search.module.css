@@ -5,17 +5,7 @@
 .title {
   padding: 2rem 1rem 1rem 1rem;
 }
-.searchInput {
-  display: inline-block;
-  text-align: center;
-  font-family: Roboto;
-  padding: 0.5rem;
-  border: 2px solid gray;
-  border-radius: 8px;
-  margin: 0.5rem 1rem;
-  width: 60%;
-  min-width: 200px;
-}
+
 .searchButton {
   padding: 0.5rem 1rem;
   border-radius: 8px;
