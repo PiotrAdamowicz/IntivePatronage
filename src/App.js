@@ -12,7 +12,6 @@ function App() {
     try {
       let res = await searchData(searchString);
       setQuery(res.pages);
-      console.log(res);
     } catch (err) {
       console.error(err.message);
     }

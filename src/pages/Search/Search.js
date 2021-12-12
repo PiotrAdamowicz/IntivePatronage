@@ -4,13 +4,11 @@ import styles from "./search.module.css";
 
 const Search = ({ data, fetchHandler }) => {
   const [searchInput, setSearchInput] = useState("");
-  // const [articleTitle, setArticleTitle] = useState("");
 
   const onChangeHandler = (e) => {
     if (e.target.value) {
       setSearchInput(e.target.value);
     }
-    // localStorage.setItem("search", e.target.value);
   };
 
   return (
