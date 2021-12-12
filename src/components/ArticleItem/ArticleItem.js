@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./articleItem.module.css";
+import { Link } from "react-router-dom";
 
 const ArticleItem = ({ data }) => {
   const { title, description, excerpt, thumbnail } = data;
@@ -7,12 +8,12 @@ const ArticleItem = ({ data }) => {
     <>
       <li className={styles.listItem}>
         <div>
-          <a
-            href={`https://en.wikipedia.org/wiki/${title}`}
+          <Link
+            to={`/article/${title.split(" ").join("_")}`}
             className={styles.link}
           >
             <h1 className={styles.title}>{title}</h1>
-          </a>
+          </Link>
           <p className={styles.text}>{description}</p>
           <p
             className={styles.text}
