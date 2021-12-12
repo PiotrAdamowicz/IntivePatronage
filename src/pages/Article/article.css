@@ -1,0 +1,38 @@
+.articleWrapper {
+  padding: 1rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: black;
+  background-color: #fff;
+}
+
+.title {
+  text-align: left;
+  border-bottom: 2px solid #5d5d5d;
+  margin-bottom: 2rem;
+}
+.article {
+  height: 100%;
+  margin: 0 3rem;
+  /* text-align: justify; */
+}
+.thumbinner {
+  width: 100% !important;
+}
+
+h2,
+h3,
+h4 {
+  text-align: left;
+  margin: 2rem 0 1rem;
+  border-bottom: 2px solid #5d5d5d;
+}
+ul,
+ol {
+  list-style: none;
+  text-align: left;
+}
+img {
+  float: right;
+  padding: 0 1rem;
+}

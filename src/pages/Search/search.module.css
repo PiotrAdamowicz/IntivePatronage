@@ -1,0 +1,46 @@
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.title {
+  padding: 2rem 1rem 1rem 1rem;
+}
+.searchInput {
+  display: inline-block;
+  text-align: center;
+  font-family: Roboto;
+  padding: 0.5rem;
+  border: 2px solid gray;
+  border-radius: 8px;
+  margin: 0.5rem 1rem;
+  width: 60%;
+  min-width: 200px;
+}
+.searchButton {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: rgb(107, 107, 107);
+  background-color: transparent;
+  border: 2px solid gray;
+  min-height: 36px;
+  min-width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.searchButton:hover {
+  background-color: gray;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .searchButton {
+    width: 60%;
+  }
+}
+.articleList {
+  list-style: none;
+  padding: 0 3rem;
+}

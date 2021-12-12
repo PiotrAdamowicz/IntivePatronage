@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Search from "./pages/Search/Search";
+import { useState } from "react";
+import { searchData } from "./utils/requests";
+import Article from "./pages/Article/Article";
 
 function App() {
+  const [query, setQuery] = useState([]);
+
+  const fetchQuery = async (searchString) => {
+    try {
+      let res = await searchData(searchString);
+      setQuery(res.pages);
+      console.log(res);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route
+          path="/"
+          element={<Search fetchHandler={fetchQuery} data={query} />}
+        />
+        <Route path="article/:articleTitle" element={<Article />} />
+      </Routes>
     </div>
   );
 }
